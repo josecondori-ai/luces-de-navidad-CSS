@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
+body{
+    background: #111;
+    margin: 0;
+  }
+  
+  img{
+    text-align: right;
+    width: 25%;
+    position: relative;
+    top: 80px;
+    left: 38%;
+   
+  }
+  h2{
+      color: #fff;
+   
+      text-align: center;
+      letter-spacing: 0.2em;
+      font-size: 4em;
+      font-family: 'Pinyon Script', cursive;
+    text-shadow: 0px 0px 8px rgb(65, 75, 255);
+  }
+  
+  .lampara{
+      text-align: center;
+      white-space: nowrap;
+      position: absolute;
+      padding: 0;
+      width: 100%;
+      top: -80px;
+      border-bottom: 3px solid #222;
+      height: 100px;
+   }
+  
+   .lampara li {
+      position: relative;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: block;
+      width: 15px;
+      height: 30px;
+      border-radius: 50%;
+      margin: 0px 15px;
+      top: 102px;
+      display: inline-block;
+      animation-duration: 1s;
+      animation-fill-mode: both;
+      animation-iteration-count:infinite;
+      animation-name: even-flash;
+  }
+  
+   .lampara li:nth-child(odd){
+       animation-name: odd-flash;
+   }
+  
+   .lampara li:before {
+      content: "";
+      position: absolute;
+      width: 14px;
+      height: 10px;
+      border-radius: 4px;
+      top: -5px;
+      left: 0px;
+      background: #444;
+  }
+  
+  @keyframes even-flash {
+      0%, 100% {
+          background: rgba(179,0,12,1);
+          box-shadow: 0px 2px 20px 4px rgba(179,0,12,1);
+      }
+      50% {
+          background: rgba(179,0,12,0.5);
+          box-shadow: 0px 2px 20px 4px rgba(179,0,12,0.3);
+      }
+  }
+  
+  @keyframes odd-flash {
+      50% {
+          background: rgba(13,239,66,1);
+          box-shadow: 0px 2px 20px 4px rgba(13,239,66,1);
+      }
+      0%,100% {
+          background: rgba(13,239,66,0.5);
+          box-shadow: 0px 2px 20px 4px rgba(13,239,66,0.3);
+      }
+  }
